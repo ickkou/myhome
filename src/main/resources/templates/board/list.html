@@ -1,7 +1,7 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="fragments/common :: head('Hello, Spring Boot!')">
+<head th:replace="fragments/common :: head('게시판')">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,13 +11,13 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
   <!-- Custom styles for this template -->
-  <link href="starter-template.css" rel="stylesheet">
+  <link href="starter-template.css" th:href="@{/starter-template.css}" rel="stylesheet">
 
-  <title>Hello, Spring Boot!</title>
+  <title>게시판</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('home')">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('board')">
     <!-- <a class="navbar-brand" href="#">Spring Boot Tutorial</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
       aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,15 +36,9 @@
     </div> -->
   </nav>
 
-  <main role="main" class="container">
-
-    <div class="starter-template">
-      <h1>Spring Boot Tutorial</h1>
-      <p class="lead">Spring Boot를 이용해 웹 페이지 제작<br> 
-            Spring Security, JPA를 이용해 보안 설정과 데이터 다루기</p>
-    </div>
-
-  </main>
+  <div class="container">
+      <h2>게시판</h2>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -56,5 +50,4 @@
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
     crossorigin="anonymous"></script>
 </body>
-
 </html>
